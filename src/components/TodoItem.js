@@ -1,7 +1,9 @@
-const TodoItem = () => {
-    return ( 
-        <li>Hit the gym <span class="close">x</span></li>
-    );
-}
- 
+const TodoItem = ({ todo }) => {
+  return (
+    <li className={`${todo.done ? "checked" : ""}`}>
+      {todo.title} <span class="close">x</span>
+    </li>
+  );
+};
+
 export default TodoItem;
